@@ -11,28 +11,48 @@
 
 main, aside {
     height: 100vh;
-    display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
-aside .header {
-    border-right: 1px solid lightgrey;
-}
+           /* Aside part */
 
 aside {
     flex-basis: 30%;
+    border-right: 3px solid #ab5797;
+}
+
+            /* Aside and Main header parts */
+
+.header, .footer {
+    flex-basis: 100px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+}
+
+.header img {
+    margin-left: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 3px solid #00b8ff;;
+}
+
+.header div i:nth-child(2) {
+    color: #c8b029;
 }
 
 .notified {
     height: 100px;
-    background-color: lightskyblue;
+    background-color: black;
     align-items: center;
 }
 
 .notified span:first-child {
     display: inline-block;
     margin: 0 25px;
-    background-color: white;
+    background-color: #c8b029;
     height:60px;
     width: 60px;
     border-radius: 100%;
@@ -40,34 +60,37 @@ aside {
     text-align: center;
 }
 
-.notified i {
-    font-size: 30px;
-    color: lightskyblue;
-}
-
-.notified span a {
-    color: grey;
-}
-
 .searchbar {
     align-items: center;
     height: 60px;
+}
+
+.searchbar,
+.searchbar input {
     padding: 0 10px;
-    background-color: rgb(230, 230, 230);
+}
+
+.notified,
+.searchbar {
+    border-bottom: 3px solid #ab5797;
 }
 
 .searchbar input {
     height: 40px;
     flex-grow: 1;
-    padding: 0 10px;
-    border-radius: 10px;
     border: 0;
     font-size: 15px;
+    background-color: black;
 }
 
 .contact-list {
-    flex-grow: 1;
     flex-direction: column;
+}
+
+.contact-list,
+.central {
+    flex-grow: 1;
+    overflow: auto;
 }
 
 .contact-list ul {
@@ -75,12 +98,7 @@ aside {
     list-style-type: none;
 }
 
-.contact-list ul li {
-    border-bottom: 1px solid lightgrey;
-    padding: 20px;
-}
-
-.contact-list li img {
+.contact-list ul li img {
     margin-left: 15px;
     width: 60px;
     height: 60px;
@@ -90,55 +108,101 @@ aside {
 .contact-list li span {
     display: inline-block;
     padding: 0 25px;
-    color: grey;
     font-size: 15px;
 }
+
+                        /* Main part */
 
 main {
     flex-basis: 70%;
 }
 
-.central {
-    flex-grow: 1;
-    background-image: url('../img/sfondo-chat.png');
+.central,
+.contact-list ul li {
     padding: 20px;
-
 }
 
 .sent, .received {
     clear: both;
-    height: 30px;
-    padding: 5px;
+    padding: 10px;
     margin: 20px 0;
 }
+
 .sent {
-    background-color: mediumspringgreen;
     float:right;
 }
 
 .received {
-    background-color: white;
     float: left;
 }
 
-.header, .footer {
-    flex-basis: 100px;
-    background-color: rgb(230, 230, 230);
-    justify-content: space-between;
+                        /* V-Else main part */
+
+.v-else {
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: black;
 }
 
-.header img {
-    margin-left: 15px;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
+.v-else img{
+    width: 500px;
+    height: auto;
+}
+
+                    /* Footer part */
+.footer {
+    border-top: 3px solid #c8b029;
+}
+
+.footer input {
+    flex-grow: 1;
+    height: 40px;
+    font-size: 20px;
+    padding:0 20px;
+    background-color: black;
+}
+
+        /* Centralizing colors, borders, font-sizes ecc */
+
+.notified h3,
+.searchbar input,
+.contact-list li span,
+.sent,
+.received,
+.header h3,
+.footer input,
+.notified span a,
+::-webkit-input-placeholder {
+    color: #00b8ff;
+}
+
+.searchbar input,
+.contact-list ul li img,
+.received {
+    border: 3px solid #c8b029;
+}
+
+.notified i,
+.header div,
+.footer i {
+    color: #ab5797;
+}
+
+.footer input,
+.sent {
+    border: 3px solid #ab5797;
+}
+
+.header,
+.contact-list ul li {
+    border-bottom: 3px solid #c8b029;
 }
 
 .header div,
-.footer i {
+.footer i ,
+.notified i {
     font-size: 30px;
-    color: grey;
 }
 
 .header div i,
@@ -146,17 +210,9 @@ main {
     margin: 0 25px;
 }
 
-.v-else {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: linen;
-}
-
+.searchbar input,
+.sent, 
+.received,
 .footer input {
-    flex-grow: 1;
-    height: 60px;
     border-radius: 10px;
-    font-size: 30px;
-    padding:0 20px;
 }
