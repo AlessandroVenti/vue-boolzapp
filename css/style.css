@@ -5,7 +5,7 @@
     font-family: 'Lato';
 }
 
-#vueFlexContainer {
+.flex {
     display: flex;
 }
 
@@ -15,22 +15,93 @@ main, aside {
     flex-direction: column;
 }
 
-aside {
-    flex-basis: 30%;
-    background-color: aqua;
+aside .header {
+    border-right: 1px solid lightgrey;
 }
 
+aside {
+    flex-basis: 30%;
+}
+
+.notified {
+    height: 100px;
+    background-color: lightskyblue;
+    align-items: center;
+}
+
+.notified span:first-child {
+    display: inline-block;
+    margin: 0 25px;
+    background-color: white;
+    height:60px;
+    width: 60px;
+    border-radius: 100%;
+    line-height: 70px;
+    text-align: center;
+}
+
+.notified i {
+    font-size: 30px;
+    color: lightskyblue;
+}
+
+.notified span a {
+    color: grey;
+}
+
+.searchbar {
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+    background-color: rgb(230, 230, 230);
+}
+
+.searchbar input {
+    height: 40px;
+    flex-grow: 1;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 15px;
+}
 main {
     flex-basis: 70%;
-    background-color: blueviolet;
 }
 
 .central {
     flex-grow: 1;
-    background-color: coral;
+    background-image: url('../img/sfondo-chat.png');
 }
 
 .header, .footer {
     flex-basis: 100px;
-    background-color: crimson;
+    background-color: rgb(230, 230, 230);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    margin-left: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.header div,
+.footer i {
+    font-size: 30px;
+    color: grey;
+}
+
+.header div i,
+.footer i{
+    margin: 0 25px;
+}
+
+.footer input {
+    flex-grow: 1;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding:0 20px;
 }

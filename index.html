@@ -12,17 +12,44 @@
         <script src="js/script.js" charset="utf-8"></script>
     </head>
     <body>
-        <div id="vueFlexContainer">
+        <div id="vueContainer" class="flex">
             <aside>
-                <section class="header">
+                <section class="header flex">
+                    
+                    <img src="img/me2.tif" alt="">
+                    <div>
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
 
+                </section>
+                <section class="notified flex">
+
+                    <span>
+                        <i class="far fa-bell-slash"></i>
+                    </span>
+                    <span>
+                        <h3>Get notified of new messages</h3>
+                        <a href="">Turn on desktop notifications</a>
+                    </span>
+
+                </section>
+                <section class="searchbar flex">
+                    <input type="text" placeholder="Search or start new chat">
                 </section>
                 
 
             </aside>
 
             <main>
-                <section class="header">
+                <section class="header flex">
+                    <img src="img/me2.tif" alt="">
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
 
                 </section>
 
@@ -30,7 +57,10 @@
 
                 </section>
 
-                <section class="footer">
+                <section class="footer flex">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Type a message...">
+                    <i class="fas fa-share"></i>
 
                 </section>
 
