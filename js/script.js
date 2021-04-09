@@ -60,7 +60,7 @@ function createVue() {
                                                                                 { date: '28/03/2020 11:32:40', text: "Non sono proprio d'accordo con questa tua decisione.", status: 'received'},
                                                                                 { date: '28/03/2020 11:42:40', text: "NON SONO D'ACCORDO.", status: 'received'},
                                                                                 { date: '28/03/2020 11:52:40', text: "Ho capito.", status: 'sent'},
-                                                                                { date: '28/03/2020 12:02:40', text: "... ma non ti lascerò sola", status: 'received'},
+                                                                                { date: '28/03/2020 12:02:40', text: "... ma non ti ignorerò", status: 'received'},
                                                                                 { date: '28/03/2020 12:15:22', text: 'Comunque vada, con te fino alla fine... choom', status: 'received'}
                                                                               ],
                     },
@@ -78,7 +78,7 @@ function createVue() {
                                                                                 { date: '10/01/2020 16:40:55', text: 'Non nominare Judy.', status: 'sent'},
                                                                                 { date: '10/01/2020 16:50:55', text: 'Ho solo detto che è una braindancer. Sono persone dalla mentalità chiusa, V. Noi siamo meglio di loro, svegliati. ', status: 'received'},
                                                                                 { date: '10/01/2020 17:00:55', text: "Quindi? Vivono meglio di te che passi la vita a pensare all'Arasaka.", status: 'sent'},
-                                                                                { date: '10/01/2020 17:10:55', text: "Quindi, dove vuoi arrivare? Non mi aiuti piu?.", status: 'received'},
+                                                                                { date: '10/01/2020 17:10:55', text: "Quindi, dove vuoi arrivare? Non mi aiuti piu?", status: 'received'},
                                                                                 { date: '10/01/2020 17:10:55', text: "Ti aiuto... ma non scrivermi ogni minuto di questa storia.", status: 'sent'},
                                                                                 { date: '10/01/2020 17:20:00', text: "Perfetto", status: 'received'},
                                                                                 ],
