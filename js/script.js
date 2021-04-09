@@ -9,6 +9,7 @@ function createVue() {
           el: '#vueContainer',
 
           data: {
+               currentContact : true,
                contacts: [
                     { name: 'Judy Alvarez', avatar: '_1', visible: true, messages: [
                                                                                 { date: '10/01/2020 15:30:55', text: 'Hai portato a spasso il cane?', status: 'sent'},

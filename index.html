@@ -57,6 +57,7 @@
             </aside>
 
             <main>
+                <template v-if="currentContact == true">
                 <section class="header flex">
                     <img src="img/me2.tif" alt="">
                     <div>
@@ -77,6 +78,10 @@
                     <i class="fas fa-share"></i>
 
                 </section>
+            </template>
+            <section class="v-else flex" v-else>
+                <img src="img/123.png" alt="">
+            </section>
 
             </main>
         </div>

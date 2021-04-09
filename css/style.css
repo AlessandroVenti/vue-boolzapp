@@ -124,6 +124,13 @@ main {
     margin: 0 25px;
 }
 
+.v-else {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: linen;
+}
+
 .footer input {
     flex-grow: 1;
     height: 60px;
