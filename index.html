@@ -36,7 +36,21 @@
 
                 </section>
                 <section class="searchbar flex">
+
                     <input type="text" placeholder="Search or start new chat">
+
+                </section>
+                <section class="contact-list flex">
+                    <div v-for="item in contacts">
+                        <img :src="'img/' + item.avatar + '.jpg'" alt="">
+                        <span>
+                            <h3>{{item.name}}</h3>
+                            <h4>{{item.messages[item.messages.length - 1].text}}</h4>
+                        </span>
+
+
+                    </div>
+
                 </section>
                 
 
