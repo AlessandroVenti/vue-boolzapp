@@ -101,6 +101,24 @@ main {
 .central {
     flex-grow: 1;
     background-image: url('../img/sfondo-chat.png');
+    padding: 20px;
+
+}
+
+.sent, .received {
+    clear: both;
+    height: 30px;
+    padding: 5px;
+    margin: 20px 0;
+}
+.sent {
+    background-color: mediumspringgreen;
+    float:right;
+}
+
+.received {
+    background-color: white;
+    float: left;
 }
 
 .header, .footer {

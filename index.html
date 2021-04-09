@@ -70,7 +70,9 @@
                 </section>
 
                 <section class="central">
-
+                    <div :class="(currentMessage.status == 'sent') ? 'sent' : 'received'" v-for="currentMessage in currentContact.messages">
+                        <p>{{currentMessage.text}}</p>
+                    </div>
                 </section>
 
                 <section class="footer flex">
