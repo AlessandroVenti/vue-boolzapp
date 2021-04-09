@@ -5,3 +5,32 @@
     font-family: 'Lato';
 }
 
+#vueFlexContainer {
+    display: flex;
+}
+
+main, aside {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    flex-basis: 30%;
+    background-color: aqua;
+}
+
+main {
+    flex-basis: 70%;
+    background-color: blueviolet;
+}
+
+.central {
+    flex-grow: 1;
+    background-color: coral;
+}
+
+.header, .footer {
+    flex-basis: 100px;
+    background-color: crimson;
+}
