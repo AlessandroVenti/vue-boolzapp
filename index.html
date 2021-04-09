@@ -41,15 +41,15 @@
 
                 </section>
                 <section class="contact-list flex">
-                    <div v-for="item in contacts">
-                        <img :src="'img/' + item.avatar + '.jpg'" alt="">
-                        <span>
-                            <h3>{{item.name}}</h3>
-                            <h4>{{item.messages[item.messages.length - 1].text}}</h4>
-                        </span>
-
-
-                    </div>
+                    <ul>
+                        <li @click="displayContact(index)" v-for="(item, index) in contacts">
+                            <img :src="'img/' + item.avatar + '.jpg'" alt="">
+                            <span>
+                                <h3>{{item.name}}</h3>
+                                <h4>{{item.messages[item.messages.length - 1].text}}</h4>
+                            </span>
+                        </li>
+                    </ul>
 
                 </section>
                 
@@ -57,9 +57,10 @@
             </aside>
 
             <main>
-                <template v-if="currentContact == true">
+                <template v-if="currentClick == true">
                 <section class="header flex">
-                    <img src="img/me2.tif" alt="">
+                    <img :src="'img/' + currentContact.avatar + '.jpg'" alt="">
+                    <h3>{{currentContact.name}}</h3>
                     <div>
                         <i class="fas fa-search"></i>
                         <i class="fas fa-paperclip"></i>

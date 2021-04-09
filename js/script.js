@@ -9,7 +9,8 @@ function createVue() {
           el: '#vueContainer',
 
           data: {
-               currentContact : true,
+               currentClick : false,
+               currentContact: false,
                contacts: [
                     { name: 'Judy Alvarez', avatar: '_1', visible: true, messages: [
                                                                                 { date: '10/01/2020 15:30:55', text: 'Hai portato a spasso il cane?', status: 'sent'},
@@ -39,6 +40,14 @@ function createVue() {
                     },                    
                 ]
           },
+
+          methods: {
+               displayContact: function(index) {
+                    this.currentClick = true;
+                    this.currentContact = this.contacts[index];
+                    console.log(this.currentContact.avatar);
+               }
+          }
      })
 }
 

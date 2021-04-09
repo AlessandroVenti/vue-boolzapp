@@ -70,20 +70,24 @@ aside {
     flex-direction: column;
 }
 
-.contact-list div {
-    padding: 20px;
-    border-bottom: 1px solid lightgrey;
+.contact-list ul {
     line-height: 30px;
+    list-style-type: none;
 }
 
-.contact-list img {
+.contact-list ul li {
+    border-bottom: 1px solid lightgrey;
+    padding: 20px;
+}
+
+.contact-list li img {
     margin-left: 15px;
     width: 60px;
     height: 60px;
     border-radius: 100%;
 }
 
-.contact-list span {
+.contact-list li span {
     display: inline-block;
     padding: 0 25px;
     color: grey;
