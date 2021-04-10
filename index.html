@@ -40,12 +40,12 @@
                 </section>
 
                 <section class="searchbar flex">
-                    <input type="text" placeholder="Search or start new chat">
+                    <input v-model="researchInput" @keyUp="filteringContacts" type="text" placeholder="Search or start new chat">
                 </section>
 
                 <section class="contact-list flex">
                     <ul>
-                        <li @click="displayContact(index)" v-for="(item, index) in contacts">
+                        <li @click="displayContact(index)" v-for="(item, index) in filteringContacts()">
                             <img :src="'img/' + item.avatar + '.jpg'" alt="">
                             <span>
                                 <h3>{{item.name}}</h3>
@@ -86,8 +86,8 @@
 
                 <section class="footer flex">
                     <i class="far fa-smile"></i>
-                    <input v-model="newSentMessage" @keyUp.enter="addSentMessage"type="text" placeholder="Type a message...">
-                    <i class="fas fa-share"></i>
+                    <input v-model="newSentMessage" @keyUp.enter="addSentMessage" type="text" placeholder="Type a message...">
+                    <i @click ='addSentMessage' class="fas fa-share"></i>
                 </section>
             </template>
 
