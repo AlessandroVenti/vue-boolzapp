@@ -77,8 +77,16 @@
                             <!-- Main-Central part -->
 
                 <section class="central">
-                    <div :class="(currentMessage.status == 'sent') ? 'sent' : 'received'" v-for="currentMessage in currentContact.messages">
+                    <div :class="(currentMessage.status == 'sent') ? 'sent' : 'received'" v-for="(currentMessage, currentMessageIndex) in currentContact.messages">
                         <p>{{currentMessage.text}}</p>
+                        <i class="fas fa-chevron-down">
+                            <ul class="messageBox">
+                                <li>Message info</li>
+                                <li @click="deleteMessage(currentMessageIndex)">Delete Message</li>
+                            </ul>
+                        </i>
+
+                        </div>
                     </div>
                 </section>
 

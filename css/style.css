@@ -122,18 +122,47 @@ main {
     padding: 20px;
 }
 
+.messageBox{
+    display: none;
+    background-color: black;
+    list-style-type: none;
+    z-index: 90;
+    padding: 10px;
+    min-width: 50px;
+    line-height: 30px;
+    position: absolute;
+}
+
+.sent .messageBox {
+    right: 0;
+    top: 40px;
+}
+
+.received .messageBox {
+    left: 0;
+    top: 40px;
+}
+
 .sent, .received {
     clear: both;
     padding: 10px;
     margin: 20px 0;
+    position: relative;
 }
 
-.sent {
+.sent,
+.sent i {
     float:right;
 }
 
-.received {
+.received,
+.received i {
     float: left;
+}
+
+.sent i:hover .messageBox,
+.received i:hover .messageBox{
+    display: block;
 }
 
                         /* V-Else main part */
@@ -177,25 +206,27 @@ main {
     color: #00b8ff;
 }
 
-.searchbar input,
-.contact-list ul li img,
-.received {
-    border: 3px solid #c8b029;
-}
-
 .notified i,
 .header div,
 .footer i {
     color: #ab5797;
 }
 
+.searchbar input,
+.contact-list ul li img,
+.received,
+.received .messageBox {
+    border: 3px solid #c8b029;
+}
+
 .footer input,
-.sent {
+.sent,
+.sent .messageBox{
     border: 3px solid #ab5797;
 }
 
 .header,
-.contact-list ul li {
+.contact-list ul li{
     border-bottom: 3px solid #c8b029;
 }
 

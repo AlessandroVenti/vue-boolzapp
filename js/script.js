@@ -139,6 +139,10 @@ function createVue() {
                filteringContacts: function() {
                     const contactsFiltered = this.contacts.filter((element, index) => this.contacts[index].name.includes(this.researchInput));
                     return contactsFiltered;
+               },
+
+               deleteMessage: function(index) {
+                    this.currentContact.messages.splice(index, 1);
                }
           }
      })
