@@ -39,10 +39,6 @@ aside {
     border: 3px solid #00b8ff;;
 }
 
-.header div i:nth-child(2) {
-    color: #c8b029;
-}
-
 .notified {
     height: 100px;
     background-color: black;
@@ -168,6 +164,7 @@ main {
 .sent h5 {
     float: left;
 }
+
 .sent:hover i,
 .received:hover i,
 .sent i:hover .messageBox,
@@ -216,7 +213,8 @@ main {
 }
 
 .contact-list ul li h3,
-.header h3 {
+.header h3,
+.header div i:nth-child(2) {
     color: #c8b029;
 }
 

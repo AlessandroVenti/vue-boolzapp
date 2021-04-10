@@ -4,14 +4,13 @@
 
 
 
-function createVue() {
+function createCyberVue() {
      new Vue ({
           el: '#vueContainer',
 
           data: {
                currentClick : false,
                currentContact: false,
-               researchControl: false,
                newSentMessage: ``,
                researchInput: ``,
                contacts: [
@@ -118,7 +117,9 @@ function createVue() {
                     },
                 ]
           },
+
           methods: {
+
                displayContact: function(index) {
                     this.currentClick = true;
                     this.currentContact = this.contacts[index];
@@ -133,11 +134,12 @@ function createVue() {
                addSentMessage: function() {
                     newSentMessageObject= { date: '10/01/2020 18:00:00', time:'18:00:00', text: this.newSentMessage, status: 'sent'};
                     this.currentContact.messages.push(newSentMessageObject);
+                    this.newSentMessage = ``;
                     setTimeout(this.addReceivedMessage, 1000);
                },
 
                filteringContacts: function() {
-                    const contactsFiltered = this.contacts.filter((element, index) => this.contacts[index].name.includes(this.researchInput));
+                    const contactsFiltered = this.contacts.filter(element => element.name.toLowerCase().includes(this.researchInput.toLowerCase()));
                     return contactsFiltered;
                },
 
@@ -148,8 +150,8 @@ function createVue() {
      })
 }
 
-function final() {
-     createVue()
+function whatsCyberApp() {
+     createCyberVue()
 }
 
-$(document).ready(final);
+document.addEventListener('DOMContentLoaded', whatsCyberApp);
