@@ -11,6 +11,7 @@ function createVue() {
           data: {
                currentClick : false,
                currentContact: false,
+               newSentMessage: ``,
                contacts: [
                     { name: 'Judy Alvarez', avatar: '_1', visible: true, messages: [
                                                                                 { date: '10/01/2020 15:30:55', text: "Non posso credere che ancora ti mostri disponibile verso quell'uomo... rischierai di farti ammazzare", status: 'received'},
@@ -121,6 +122,17 @@ function createVue() {
                     this.currentClick = true;
                     this.currentContact = this.contacts[index];
                     console.log(this.currentContact.avatar);
+               },
+
+               addReceivedMessage: function() {
+                    newReceivedMessageObject = { date: '10/01/2020 18:00:01', text: 'ok', status: 'received'};
+                    this.currentContact.messages.push(newReceivedMessageObject);
+               },
+
+               addSentMessage: function() {
+                    newSentMessageObject= { date: '10/01/2020 18:00:00', text: this.newSentMessage, status: 'sent'};
+                    this.currentContact.messages.push(newSentMessageObject);
+                    setTimeout(this.addReceivedMessage, 1000);
                }
           }
      })

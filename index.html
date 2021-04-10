@@ -86,7 +86,7 @@
 
                 <section class="footer flex">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Type a message...">
+                    <input v-model="newSentMessage" @keyUp.enter="addSentMessage"type="text" placeholder="Type a message...">
                     <i class="fas fa-share"></i>
                 </section>
             </template>
