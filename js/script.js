@@ -87,18 +87,18 @@ function createCyberVue() {
                     },
                     
                     { name: 'Goro Takemura', avatar: '_5', visible: true, messages: [
-                         { date: '10/01/2020 15:20:55',time: '15:20:55', text: 'V, sono a Night City.', status: 'received'},
-                         { date: '10/01/2020 15:30:55',time: '15:30:55', text: 'Hey! Ma che sorpresa', status: 'sent'},
-                         { date: '10/01/2020 15:40:55',time: '15:40:55', text: 'Non per te... devo fare commissioni. Ma ne approfitto, ci incontriamo?', status: 'received'},
-                         { date: '10/01/2020 15:50:55',time: '15:50:55', text: 'Ma che gentile...', status: 'sent'},
-                         { date: '10/01/2020 16:00:55',time: '16:00:55', text: 'Non ti va?', status: 'received'},
-                         { date: '10/01/2020 16:10:55',time: '16:10:55', text: 'Si si, certo che mi va. Solita birra al solito posto?', status: 'sent'},
-                         { date: '10/01/2020 16:20:55',time: '16:20:55', text: 'Jig Jig Street.', status: 'received'},
-                         { date: '10/01/2020 16:30:55',time: '16:30:55', text: 'Ok, il solito posto... anche il solito orario? ', status: 'sent'},
-                         { date: '10/01/2020 16:40:55',time: '16:40:55', text: 'Si', status: 'received'},
-                         { date: '10/01/2020 16:50:55',time: '16:50:55', text: 'Ok, perfetto. A stasera, Goro', status: 'sent'},
-                         { date: '10/01/2020 17:00:55',time: '17:00:55', text: 'Ciao.', status: 'received'}
-                         ],
+                                                                                { date: '10/01/2020 15:20:55',time: '15:20:55', text: 'V, sono a Night City.', status: 'received'},
+                                                                                { date: '10/01/2020 15:30:55',time: '15:30:55', text: 'Hey! Ma che sorpresa', status: 'sent'},
+                                                                                { date: '10/01/2020 15:40:55',time: '15:40:55', text: 'Non per te... devo fare commissioni. Ma ne approfitto, ci incontriamo?', status: 'received'},
+                                                                                { date: '10/01/2020 15:50:55',time: '15:50:55', text: 'Ma che gentile...', status: 'sent'},
+                                                                                { date: '10/01/2020 16:00:55',time: '16:00:55', text: 'Non ti va?', status: 'received'},
+                                                                                { date: '10/01/2020 16:10:55',time: '16:10:55', text: 'Si si, certo che mi va. Solita birra al solito posto?', status: 'sent'},
+                                                                                { date: '10/01/2020 16:20:55',time: '16:20:55', text: 'Jig Jig Street.', status: 'received'},
+                                                                                { date: '10/01/2020 16:30:55',time: '16:30:55', text: 'Ok, il solito posto... anche il solito orario? ', status: 'sent'},
+                                                                                { date: '10/01/2020 16:40:55',time: '16:40:55', text: 'Si', status: 'received'},
+                                                                                { date: '10/01/2020 16:50:55',time: '16:50:55', text: 'Ok, perfetto. A stasera, Goro', status: 'sent'},
+                                                                                { date: '10/01/2020 17:00:55',time: '17:00:55', text: 'Ciao.', status: 'received'}
+                                                                                ],
                     },
 
                     { name: 'Rogue Amendiares', avatar: '_6', visible: true, messages: [
