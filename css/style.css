@@ -133,6 +133,12 @@ main {
     position: absolute;
 }
 
+.messageBox,
+.sent i,
+.received i{
+    display: none;
+}
+
 .sent .messageBox {
     right: 0;
     top: 40px;
@@ -146,20 +152,24 @@ main {
 .sent, .received {
     clear: both;
     padding: 10px;
+    line-height: 20px;
     margin: 20px 0;
     position: relative;
 }
 
 .sent,
-.sent i {
+.sent i,
+.received h5 {
     float:right;
 }
 
 .received,
-.received i {
+.received i,
+.sent h5 {
     float: left;
 }
-
+.sent:hover i,
+.received:hover i,
 .sent i:hover .messageBox,
 .received i:hover .messageBox{
     display: block;
@@ -199,11 +209,15 @@ main {
 .contact-list li span,
 .sent,
 .received,
-.header h3,
 .footer input,
 .notified span a,
 ::-webkit-input-placeholder {
     color: #00b8ff;
+}
+
+.contact-list ul li h3,
+.header h3 {
+    color: #c8b029;
 }
 
 .notified i,
@@ -234,6 +248,12 @@ main {
 .footer i ,
 .notified i {
     font-size: 30px;
+}
+
+.sent h5,
+.received h5 {
+    font-size: 10px;
+    margin: 0 10px;
 }
 
 .header div i,

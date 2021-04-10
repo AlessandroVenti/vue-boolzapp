@@ -50,6 +50,7 @@
                             <span>
                                 <h3>{{item.name}}</h3>
                                 <h4>{{item.messages[item.messages.length - 1].text}}</h4>
+                                <h5>{{item.messages[item.messages.length - 1].time}}</h5>
                             </span>
                         </li>
                     </ul>
@@ -79,6 +80,7 @@
                 <section class="central">
                     <div :class="(currentMessage.status == 'sent') ? 'sent' : 'received'" v-for="(currentMessage, currentMessageIndex) in currentContact.messages">
                         <p>{{currentMessage.text}}</p>
+                        <h5>{{currentMessage.time}}</h5>
                         <i class="fas fa-chevron-down">
                             <ul class="messageBox">
                                 <li>Message info</li>
