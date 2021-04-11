@@ -120,10 +120,11 @@ function createCyberVue() {
 
           methods: {
 
-               displayContact: function(index) {
+               displayContact: function(item) {
                     this.currentClick = true;
-                    this.currentContact = this.contacts[index];
+                    this.currentContact = item;
                     console.log(this.currentContact.avatar);
+                    console.log(this.currentContact);
                },
 
                addReceivedMessage: function() {
