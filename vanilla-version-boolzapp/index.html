@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>BoolZapp!</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="vueContainer" class="flex">
+
+                                    <!-- Aside part -->
+            <aside class="flex">
+
+                                <!-- Aside-Header part -->
+
+                <section class="header flex">
+                    <img src="img/v.webp" alt="">
+                    <div>
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </section>
+
+                <section class="notified flex">
+                    <span>
+                        <i class="far fa-bell-slash"></i>
+                    </span>
+
+                    <span>
+                        <h3>Get notified of new messages</h3>
+                        <a href="">Turn on desktop notifications</a>
+                    </span>
+                </section>
+
+                <section class="searchbar flex">
+                    <input v-model="researchInput" @keyUp="filteringContacts" type="text" placeholder="Search or start new chat">
+                </section>
+
+                <section class="contact-list flex">
+                    <ul>
+                        <li @click="displayContact(item)" v-for="(item) in filteringContacts()">
+                            <img :src="'img/' + item.avatar + '.jpg'" alt="">
+                            <span v-if="item.messages.length > 0">
+                                <h3>{{item.name}}</h3>
+                                <h4>{{item.messages[item.messages.length - 1].text}}</h4>
+                                <h5>{{item.messages[item.messages.length - 1].time}}</h5>
+                            </span>
+                            <span v-else>
+                                <h3>{{item.name}}</h3>
+                                <h4>Non ci sono messaggi</h4>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+
+            </aside>
+
+                                <!-- Main part -->
+
+            <main class="flex">
+                <template v-if="currentClick == true">
+
+                                <!-- Main-Header part -->
+
+                <section class="header flex">
+                    <img :src="'img/' + currentContact.avatar + '.jpg'" alt="">
+                    <h3>{{currentContact.name}}</h3>
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+               </section>
+
+                            <!-- Main-Central part -->
+
+                <section class="central">
+                    <div :class="(currentMessage.status == 'sent') ? 'sent' : 'received'" v-for="(currentMessage, currentMessageIndex) in currentContact.messages">
+                        <p>{{currentMessage.text}}</p>
+                        <h5>{{currentMessage.time}}</h5>
+                        <i class="fas fa-chevron-down">
+                            <ul class="messageBox">
+                                <li>Message info</li>
+                                <li @click="deleteMessage(currentMessageIndex)">Delete Message</li>
+                            </ul>
+                        </i>
+                    </div>
+                </section>
+
+                            <!-- Main-Footer part -->
+
+                <section class="footer flex">
+                    <i class="far fa-smile"></i>
+                    <input v-model="newSentMessage" @keyUp.enter="addSentMessage" type="text" placeholder="Type a message...">
+                    <i @click ='addSentMessage' class="fas fa-share"></i>
+                </section>
+            </template>
+            
+                            <!-- V-Else main part -->
+
+            <section class="v-else flex" v-else>
+                <img src="img/123.png" alt="">
+            </section>
+
+            </main>
+        </div>
+    </body>
+</html>
