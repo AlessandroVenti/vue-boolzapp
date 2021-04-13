@@ -243,3 +243,67 @@ main, aside,
 .footer input {
     border-radius: 10px;
 }
+
+@media (max-width: 1200px) AND (min-width: 998px) {
+
+    .header div i, 
+    .footer i {
+        margin: 0 20px;       
+    }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+
+    .header div,
+    .footer i,
+    .notified i {
+        font-size: 25px;
+    }
+
+    .header div i, 
+    .footer i {
+        margin: 0 10px;       
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header div,
+    .footer i ,
+    .notified i {
+        font-size: 25px;
+    }
+
+    .contact-list li span,
+    .notified h3 {
+        padding: 0 0;
+        font-size: 16px;       
+    }
+
+    .header div i, 
+    .footer i {
+        margin: 0 10px;       
+    }
+
+    .notified span:first-child{
+        width: 100px;
+    }
+
+    .central {
+        padding: 0 20px;
+    }
+
+    .contact-list ul li {
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    .contact-list ul li img{
+        margin-top: 10px;
+    }
+
+    .v-else img {
+        width: 300px;
+        
+    }
+}
