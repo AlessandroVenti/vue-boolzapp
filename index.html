@@ -81,7 +81,7 @@
 
                             <!-- Main-Central part -->
 
-                <section class="central">
+                <section class="central" id="js-scroll">
                     <div :class="(currentMessage.status == 'sent') ? 'sent' : 'received'" v-for="(currentMessage, currentMessageIndex) in currentContact.messages">
                         <p>{{currentMessage.text}}</p>
                         <h5>{{currentMessage.time}}</h5>
