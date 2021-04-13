@@ -136,7 +136,7 @@ function createCyberVue() {
                     setTimeout(() => {
                          newReceivedMessageObject = { date: '10/01/2020 18:00:01', time: '18:00:01', text: 'ok', status: 'received'};
                          fixedCurrentContact.messages.push(newReceivedMessageObject);
-                    }, 3000);
+                    }, 1000);
                },
 
                addSentMessage: function() {
