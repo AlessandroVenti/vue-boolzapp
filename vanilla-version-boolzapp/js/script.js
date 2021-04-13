@@ -118,6 +118,11 @@ function createCyberVue() {
                 ]
           },
 
+          updated() { 
+               let container = this.$el.querySelector("#js-scroll");
+               container.scrollTop = container.scrollHeight;
+          },
+
           methods: {
 
                displayContact: function(item) {
@@ -127,16 +132,19 @@ function createCyberVue() {
                     console.log(this.currentContact);
                },
 
-               addReceivedMessage: function() {
-                    newReceivedMessageObject = { date: '10/01/2020 18:00:01', time: '18:00:01', text: 'ok', status: 'received'};
-                    this.currentContact.messages.push(newReceivedMessageObject);
+               addReceivedMessage: function(fixedCurrentContact) {
+                    setTimeout(() => {
+                         newReceivedMessageObject = { date: '10/01/2020 18:00:01', time: '18:00:01', text: 'ok', status: 'received'};
+                         fixedCurrentContact.messages.push(newReceivedMessageObject);
+                    }, 1000);
                },
 
                addSentMessage: function() {
                     newSentMessageObject= { date: '10/01/2020 18:00:00', time:'18:00:00', text: this.newSentMessage, status: 'sent'};
                     this.currentContact.messages.push(newSentMessageObject);
                     this.newSentMessage = ``;
-                    setTimeout(this.addReceivedMessage, 1000);
+                    let fixedCurrentContact = this.currentContact;
+                    this.addReceivedMessage(fixedCurrentContact);
                },
 
                filteringContacts: function() {
