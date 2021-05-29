@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>CyberBoolZapp</title>
         <link rel="stylesheet" href="css/style.css">
@@ -47,14 +47,10 @@
                     <ul>
                         <li @click="displayContact(item)" v-for="(item) in filteringContacts()">
                             <img :src="'img/' + item.avatar + '.jpg'" alt="">
-                            <span v-if="item.messages.length > 0">
+                            <span>
                                 <h3>{{item.name}}</h3>
-                                <h4>{{item.messages[item.messages.length - 1].text}}</h4>
-                                <h5>{{item.messages[item.messages.length - 1].time}}</h5>
-                            </span>
-                            <span v-else>
-                                <h3>{{item.name}}</h3>
-                                <h4>Non ci sono messaggi</h4>
+                                <h4>{{getLastMessage(item)}}</h4>
+                                <h5>{{getLastTime(item)}}</h5>
                             </span>
                         </li>
                     </ul>

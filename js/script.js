@@ -123,7 +123,30 @@ function createCyberVue() {
                container.scrollTop = container.scrollHeight;
           },
 
+          // filters: {
+
+          //      getLastMessage: function(value) {
+          //           if(value.messages.length > 0) {
+          //                return value.messages.length -1
+          //           }
+          //      }
+          // },
+
           methods: {
+
+               getLastMessage: function(item) {
+                    if(item.messages.length > 0) {
+                         return item.messages[item.messages.length - 1].text;
+                    } else {
+                         return "non ci sono messaggi";
+                    }
+               },
+
+               getLastTime: function(item) {
+                    if(item.messages.length > 0) {
+                         return item.messages[item.messages.length - 1].time;
+                    }
+               },
 
                displayContact: function(item) {
                     this.currentClick = true;
